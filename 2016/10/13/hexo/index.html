@@ -20,20 +20,10 @@
 
 
 
-
-    <meta name="keywords" content="Hexo,next" />
-
-
-
-
-
-    <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.1" />
-
-
-
+	<meta name="keywords" content="hexo," />
 
   <meta name="baidu-site-verification" content="G9yMkDY5mG" />
-  <title> helloworld1 // jereng's blog </title>
+  <title> hexo // jereng's blog </title>
 </head>
 
 <body>
@@ -121,7 +111,7 @@
           
           
             
-              helloworld1
+              hexo
             
           
         </h1>
@@ -130,9 +120,9 @@
       <div class="post-meta">
         <span class="post-time">
           
-            发表于 2016-10-11
+            发表于 2016-10-13
             <!--增加编辑日期-->
-              &nbsp 更新于 2016-10-12
+              &nbsp 更新于 2016-10-13
           
         </span>
 
@@ -144,8 +134,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2016/10/11/helloworld1/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/11/helloworld1/"></span>
+            <a href="/2016/10/13/hexo/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/13/hexo/"></span>
             </a>
           </span>
           
@@ -160,10 +150,8 @@
         
 
         
-          <h1 id="HCL实验-端口汇聚"><a href="#HCL实验-端口汇聚" class="headerlink" title="HCL实验 - 端口汇聚"></a>HCL实验 - 端口汇聚</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"># 首先创建 Bridge-Aggregation 1</div><div class="line">&lt;S1&gt;sys</div><div class="line">System View: return to User View with Ctrl+Z.</div><div class="line">[S1]interface Bridge-Aggregation 1</div><div class="line">[S1-Bridge-Aggregation1]quit</div><div class="line"># 进入端口，加入group 1组</div><div class="line">[S1]interface GigabitEthernet 1/0/1</div><div class="line">[S1-GigabitEthernet1/0/1]port link-aggregation group 1</div><div class="line">[S1]interface GigabitEthernet 1/0/2</div><div class="line">[S1-GigabitEthernet1/0/2]port link-aggregation group 1</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># IP地址配置查询</div><div class="line">display ip interface brief</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"># 查看汇聚端口配置状态</div><div class="line">[S1]dis int brief</div><div class="line">Brief information on interface(s) under bridge mode:</div><div class="line">Link: ADM - administratively down; Stby - standby</div><div class="line">Speed or Duplex: (a)/A - auto; H - half; F - full</div><div class="line">Type: A - access; T - trunk; H - hybrid</div><div class="line">Interface            Link Speed   Duplex Type PVID Description</div><div class="line">BAGG1                UP   2G(a)   F(a)   A    1</div><div class="line">GE1/0/1              UP   1G(a)   F(a)   A    1</div><div class="line">GE1/0/2              UP   1G(a)   F(a)   A    1</div><div class="line"></div><div class="line">#</div><div class="line">[S1]display link-aggregation verbose</div><div class="line">Loadsharing Type: Shar -- Loadsharing, NonS -- Non-Loadsharing</div><div class="line">Port Status: S -- Selected, U -- Unselected, I -- Individual</div><div class="line">Flags:  A -- LACP_Activity, B -- LACP_Timeout, C -- Aggregation,</div><div class="line">        D -- Synchronization, E -- Collecting, F -- Distributing,</div><div class="line">        G -- Defaulted, H -- Expired</div><div class="line"></div><div class="line">Aggregate Interface: Bridge-Aggregation1</div><div class="line">Aggregation Mode: Static</div><div class="line">Loadsharing Type: Shar</div><div class="line">  Port             Status  Priority Oper-Key</div><div class="line">--------------------------------------------------------------------------------</div><div class="line">  GE1/0/1          S       32768    1</div><div class="line">  GE1/0/2          S       32768    1</div></pre></td></tr></table></figure>
-
+          <h6 id="新建页面"><a href="#新建页面" class="headerlink" title="新建页面"></a>新建页面</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new page &quot;about&quot;</div></pre></td></tr></table></figure>
+<h6 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;hello world&quot;</div></pre></td></tr></table></figure>
         
       </div>
     
@@ -171,18 +159,24 @@
     
       <div class="post-footer">
         
+          <div class="post-tags">
+            
+              <a href="/tags/hexo/">
+                #hexo
+              </a>
+            
+          </div>
+        
 
         
           <div class="post-nav">
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/2016/10/13/第一篇文章/">第一篇文章</a>
-              
             </div>
 
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2016/10/11/hello-world/">Hello World</a>
+                <a href="/2016/10/13/hexo-tags-categories-配置/">hexo tags categories 配置</a>
               
             </div>
           </div>
@@ -199,7 +193,7 @@
     <div class="comments" id="comments">
       
         <!--多说分享start-->
-        <div class="ds-share" data-thread-key="2016/10/11/helloworld1/" data-title="helloworld1"  data-content="来自他的小人国" data-url="https://jereng.github.io/2016/10/11/helloworld1/">
+        <div class="ds-share" data-thread-key="2016/10/13/hexo/" data-title="hexo"  data-content="来自他的小人国" data-url="https://jereng.github.io/2016/10/13/hexo/">
         <div class="ds-share-inline">
         <ul  class="ds-share-icons-16">
         <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
@@ -214,8 +208,8 @@
       </div> 
       <!--多说分享end-->
       <!--多说评论start-->
-        <div class="ds-thread" data-thread-key="2016/10/11/helloworld1/"
-             data-title="helloworld1" data-url="https://jereng.github.io/2016/10/11/helloworld1/">
+        <div class="ds-thread" data-thread-key="2016/10/13/hexo/"
+             data-title="hexo" data-url="https://jereng.github.io/2016/10/13/hexo/">
         </div>
       <!--多说评论end-->
 
@@ -302,7 +296,7 @@
         <div class="post-toc">
           
           
-            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HCL实验-端口汇聚"><span class="nav-number">1.</span> <span class="nav-text">HCL实验 - 端口汇聚</span></a></li></ol></div>
+            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#新建页面"><span class="nav-number">1.</span> <span class="nav-text">新建页面</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#新建文章"><span class="nav-number">2.</span> <span class="nav-text">新建文章</span></a></li></ol></div>
           
         </div>
         <div class="post-toc-indicator-bottom post-toc-indicator"></div>
