@@ -20,20 +20,10 @@
 
 
 
-
-    <meta name="keywords" content="Hexo,next" />
-
-
-
-
-
-    <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.1" />
-
-
-
+	<meta name="keywords" content="hexo, github, 个人博客," />
 
   <meta name="baidu-site-verification" content="G9yMkDY5mG" />
-  <title> helloworld1 // jereng's blog </title>
+  <title> hexo tags categories 配置 // jereng's blog </title>
 </head>
 
 <body>
@@ -121,7 +111,7 @@
           
           
             
-              helloworld1
+              hexo tags categories 配置
             
           
         </h1>
@@ -130,9 +120,9 @@
       <div class="post-meta">
         <span class="post-time">
           
-            发表于 2016-10-11
+            发表于 2016-10-13
             <!--增加编辑日期-->
-              &nbsp 更新于 2016-10-12
+              &nbsp 更新于 2016-10-13
           
         </span>
 
@@ -144,8 +134,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2016/10/11/helloworld1/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/11/helloworld1/"></span>
+            <a href="/2016/10/13/hexo-tags-categories-配置/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/13/hexo-tags-categories-配置/"></span>
             </a>
           </span>
           
@@ -160,10 +150,10 @@
         
 
         
-          <h1 id="HCL实验-端口汇聚"><a href="#HCL实验-端口汇聚" class="headerlink" title="HCL实验 - 端口汇聚"></a>HCL实验 - 端口汇聚</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"># 首先创建 Bridge-Aggregation 1</div><div class="line">&lt;S1&gt;sys</div><div class="line">System View: return to User View with Ctrl+Z.</div><div class="line">[S1]interface Bridge-Aggregation 1</div><div class="line">[S1-Bridge-Aggregation1]quit</div><div class="line"># 进入端口，加入group 1组</div><div class="line">[S1]interface GigabitEthernet 1/0/1</div><div class="line">[S1-GigabitEthernet1/0/1]port link-aggregation group 1</div><div class="line">[S1]interface GigabitEthernet 1/0/2</div><div class="line">[S1-GigabitEthernet1/0/2]port link-aggregation group 1</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># IP地址配置查询</div><div class="line">display ip interface brief</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"># 查看汇聚端口配置状态</div><div class="line">[S1]dis int brief</div><div class="line">Brief information on interface(s) under bridge mode:</div><div class="line">Link: ADM - administratively down; Stby - standby</div><div class="line">Speed or Duplex: (a)/A - auto; H - half; F - full</div><div class="line">Type: A - access; T - trunk; H - hybrid</div><div class="line">Interface            Link Speed   Duplex Type PVID Description</div><div class="line">BAGG1                UP   2G(a)   F(a)   A    1</div><div class="line">GE1/0/1              UP   1G(a)   F(a)   A    1</div><div class="line">GE1/0/2              UP   1G(a)   F(a)   A    1</div><div class="line"></div><div class="line">#</div><div class="line">[S1]display link-aggregation verbose</div><div class="line">Loadsharing Type: Shar -- Loadsharing, NonS -- Non-Loadsharing</div><div class="line">Port Status: S -- Selected, U -- Unselected, I -- Individual</div><div class="line">Flags:  A -- LACP_Activity, B -- LACP_Timeout, C -- Aggregation,</div><div class="line">        D -- Synchronization, E -- Collecting, F -- Distributing,</div><div class="line">        G -- Defaulted, H -- Expired</div><div class="line"></div><div class="line">Aggregate Interface: Bridge-Aggregation1</div><div class="line">Aggregation Mode: Static</div><div class="line">Loadsharing Type: Shar</div><div class="line">  Port             Status  Priority Oper-Key</div><div class="line">--------------------------------------------------------------------------------</div><div class="line">  GE1/0/1          S       32768    1</div><div class="line">  GE1/0/2          S       32768    1</div></pre></td></tr></table></figure>
-
+          <h2 id="添加标签"><a href="#添加标签" class="headerlink" title="添加标签"></a>添加标签</h2><p>hexo new page tags<br>确认站点配置文件里有tag_dir: tags<br>确认主题配置文件里有tags: /tags<br>编辑站点的source/tags/index.md，添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title: tags</div><div class="line">date: 2015-10-20 06:49:50</div><div class="line">type: &quot;tags&quot;</div><div class="line">comments: false</div></pre></td></tr></table></figure>
+<h2 id="添加分类"><a href="#添加分类" class="headerlink" title="添加分类"></a>添加分类</h2><p>hexo new page categories<br>确认站点配置文件里有category_dir: categories<br>确认主题配置文件里有categories: /categories<br>编辑站点的source/categories/index.md，添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title: categories</div><div class="line">date: 2015-10-20 06:49:50</div><div class="line">type: &quot;categories&quot;</div><div class="line">comments: false</div></pre></td></tr></table></figure>
         
       </div>
     
@@ -171,18 +161,24 @@
     
       <div class="post-footer">
         
+          <div class="post-tags">
+            
+              <a href="/tags/hexo-github-个人博客/">
+                #hexo, github, 个人博客
+              </a>
+            
+          </div>
+        
 
         
           <div class="post-nav">
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/2016/10/13/第一篇文章/">第一篇文章</a>
-              
             </div>
 
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2016/10/11/hello-world/">Hello World</a>
+                <a href="/2016/10/13/第二篇文章/">第二篇文章</a>
               
             </div>
           </div>
@@ -199,7 +195,7 @@
     <div class="comments" id="comments">
       
         <!--多说分享start-->
-        <div class="ds-share" data-thread-key="2016/10/11/helloworld1/" data-title="helloworld1"  data-content="来自他的小人国" data-url="https://jereng.github.io/2016/10/11/helloworld1/">
+        <div class="ds-share" data-thread-key="2016/10/13/hexo-tags-categories-配置/" data-title="hexo tags categories 配置"  data-content="来自他的小人国" data-url="https://jereng.github.io/2016/10/13/hexo-tags-categories-配置/">
         <div class="ds-share-inline">
         <ul  class="ds-share-icons-16">
         <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
@@ -214,8 +210,8 @@
       </div> 
       <!--多说分享end-->
       <!--多说评论start-->
-        <div class="ds-thread" data-thread-key="2016/10/11/helloworld1/"
-             data-title="helloworld1" data-url="https://jereng.github.io/2016/10/11/helloworld1/">
+        <div class="ds-thread" data-thread-key="2016/10/13/hexo-tags-categories-配置/"
+             data-title="hexo tags categories 配置" data-url="https://jereng.github.io/2016/10/13/hexo-tags-categories-配置/">
         </div>
       <!--多说评论end-->
 
@@ -302,7 +298,7 @@
         <div class="post-toc">
           
           
-            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HCL实验-端口汇聚"><span class="nav-number">1.</span> <span class="nav-text">HCL实验 - 端口汇聚</span></a></li></ol></div>
+            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加标签"><span class="nav-number">1.</span> <span class="nav-text">添加标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加分类"><span class="nav-number">2.</span> <span class="nav-text">添加分类</span></a></li></ol></div>
           
         </div>
         <div class="post-toc-indicator-bottom post-toc-indicator"></div>
